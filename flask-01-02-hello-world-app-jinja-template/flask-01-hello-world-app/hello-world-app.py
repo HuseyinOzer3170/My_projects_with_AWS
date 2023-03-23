@@ -1,19 +1,22 @@
-from flask import Flask 
+from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def head():
-    return 'Hello world Oktay'
+    return 'Hello world Hüseyin'
 
 
 @app.route('/second')
 def second():
     return 'This is second page'
 
+
 @app.route('/third')
 def third():
     return 'This is third page'
+
 
 @app.route('/forth/<string:id>')
 def forth(id):
@@ -23,4 +26,3 @@ def forth(id):
 if __name__ == '__main__':
 
     app.run(debug=True)
-
